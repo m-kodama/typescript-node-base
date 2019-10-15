@@ -49,3 +49,18 @@ function func(arg: string): number {
     return Number(arg);
 }
 console.log(f('4193'));
+
+// # 可変長引数
+const f2 = (foo: number, ...bar: number[]) => bar;
+console.log(f2(1, 2, 3, 4, 5));
+
+// # void型
+// void型はundefinedを入れることができる
+// 戻り値がない関数、returnのみで戻る関数はundefinedを返す 
+const a6: void = undefined;
+
+// # any型
+// 使ったら負け
+
+const a7: any = 13
+const a8: string = a7;
